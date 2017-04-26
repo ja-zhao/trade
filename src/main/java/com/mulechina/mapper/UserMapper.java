@@ -12,5 +12,8 @@ import com.mulechina.domain.User;
 @Mapper
 public interface UserMapper {
 	@Select("select * from user where username = #{username}")
-	User findUserByName(@Param("username") String username);
+	User findUserByUsername(@Param("username") String username);
+	
+	@Select("select count(*) from user where username = #{username} and password=#{password}")
+	int checklogin(User user);
 }

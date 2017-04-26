@@ -7,29 +7,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mulechina.domain.User;
-import com.mulechina.mapper.UserMapper;
 
 @Controller
-@RequestMapping({ "/home" })
+@RequestMapping({ "/user" })
 public class UserController {
 	@Autowired
-	private UserMapper userMapper;
+	private UserService userService;
 	
 	@Value("${application.hello:Hello Angel}")
 	private String hello;
 
 	@RequestMapping(value = "/user")
 	@ResponseBody
-	public String user() {
-		User user = userMapper.findUserByName("zhaojunfei");
+	public String user(String username) {
+		User user = userService.findUserByUsername(username);
 		return user.getUsername() + "-----" + user.getPassword();
 	}
 
-	@RequestMapping(value = "/index")
-	public String index() {
-		System.out.println("12123s"+hello);
-		User user = userMapper.findUserByName("zhaojunfei");
-		System.out.println("12123s" + hello + user);
-		return "index";
+	@RequestMapping(value = "/checklogin")
+	public String checklogin(User user) {
+		int cnt = userService.checklogin(user);
+		if(cnt!=0){
+			return "success";
+		}
+		return "fail";
 	}
 }
