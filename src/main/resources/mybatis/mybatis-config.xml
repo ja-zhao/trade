@@ -12,11 +12,8 @@
 	</settings>
 	<typeAliases>
 			<!--会员中心 -->
-		<typeAlias type="com.qianbao.domain.User" alias="user" />
-		<typeAlias type="com.qianbao.domain.MsgUserAudience" alias="userAudience" />
-		<typeAlias type="com.qianbao.domain.EntryControl" alias="entryControl" />
-		<typeAlias type="com.qianbao.domain.AuthLoginRecord" alias="authLoginRecord" />		
-		<typeAlias type="com.qianbao.domain.LinkConfig" alias="linkConfig" />		
+		<!-- <typeAlias type="com.qianbao.domain.User" alias="user" /> -->
+		
 	</typeAliases>
 	
 		<!-- 必须放到settings下面 -->
@@ -29,55 +26,8 @@
 	</plugins>
 	<mappers>
 		<!-- 公共信息 -->
-		<mapper resource="mybatisMappers/ParameterClassMapper.xml" />
-		<mapper resource="mybatisMappers/ParameterMapper.xml" />
-		<mapper resource="mybatisMappers/CommonMapper.xml" />
-		<mapper resource="mybatisMappers/BankMapper.xml" />
-		<mapper resource="mybatisMappers/ProvinceMapper.xml" />		
+		<!-- <mapper resource="mybatisMappers/ParameterClassMapper.xml" /> -->
 		
-		<!-- 会员中心 -->
-		<mapper resource="mybatisMappers/UserMapper.xml" />
-		<mapper resource="mybatisMappers/UserAudienceMapper.xml" />
-		<mapper resource="mybatisMappers/EntryControlMapper.xml" />
-		<mapper resource="mybatisMappers/AuthLoginRecordMapper.xml" />	
-		<mapper resource="mybatisMappers/LinkConfigMapper.xml" />
-		
-		<!-- 广告位信息 -->
-		<mapper resource="mybatisMappers/AdvertPositionMapper.xml" />
-		<!-- 消息 -->
-		<mapper resource="mybatisMappers/MsgRecordMapper.xml" />
-	 	<mapper resource="mybatisMappers/MsgStatusMapper.xml" />
-		
-		<!-- 借款申请信息 -->
-		<mapper resource="mybatisMappers/PersonBaseMapper.xml" />
-		<mapper resource="mybatisMappers/PersonOtherMapper.xml" />
-		<mapper resource="mybatisMappers/LoanApplyMapper.xml" />
-		<mapper resource="mybatisMappers/ContactPersonMapper.xml" />
-		<mapper resource="mybatisMappers/TradeImageMapper.xml" />
-		<mapper resource="mybatisMappers/ProductMapper.xml" />
-		<mapper resource="mybatisMappers/CorporationMapper.xml" />
-		<mapper resource="mybatisMappers/UsrImageMapper.xml" />
-		<mapper resource="mybatisMappers/AccountMapper.xml" />
-		<mapper resource="mybatisMappers/UserApplyForScoreMapper.xml" />
-		<mapper resource="mybatisMappers/OrganizationMapper.xml" />
-		<mapper resource="mybatisMappers/LoanOtherInfoMapper.xml"/>
-		<mapper resource="mybatisMappers/LoanMoreInfMapper.xml"/>
-		<!-- 现金贷认证项 -->
-		<mapper resource="mybatisMappers/AuthItemMapper.xml" />
-		<mapper resource="mybatisMappers/AuthRecordHisMapper.xml" />	
-		<mapper resource="mybatisMappers/AuthRecordMapper.xml" />
-		<!-- 手机通讯录 -->
-		<mapper resource="mybatisMappers/PhoneContactMapper.xml" />
-		<!-- 位置信息 -->
-		<mapper resource="mybatisMappers/LocationInfoMapper.xml" />
-		<!--operation mobile reset pwd -->
-		<mapper resource="mybatisMappers/MobileCodeInfMapper.xml" />
-		<mapper resource="mybatisMappers/MobileResetPwdMapper.xml" />		
-		<!-- 合同相关 -->
-		<mapper resource="mybatisMappers/ContractSignConfigMapper.xml" />		
-		<mapper resource="mybatisMappers/ContractTemplateMapper.xml" />	
-		<mapper resource="mybatisMappers/ProductContractMapper.xml" />
-		<mapper resource="mybatisMappers/LoanContractMapper.xml" />		
 	</mappers>
 
 </configuration>
