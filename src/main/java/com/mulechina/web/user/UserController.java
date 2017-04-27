@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.mulechina.aop.RequestLimit;
 import com.mulechina.aop.Token;
 import com.mulechina.domain.User;
 
@@ -43,6 +44,13 @@ public class UserController {
 			return "success";
 		}
 		logger.info("登录失败");
+		return "fail";
+	}
+	
+	@RequestMapping("/hello")
+	@RequestLimit(count = 10)
+	public String hello(HttpServletRequest request) {
+		
 		return "fail";
 	}
 }
